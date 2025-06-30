@@ -37,3 +37,8 @@ COPY --from=compile-image /root/nltk_data /root/nltk_data
 ENV PATH="/opt/venv/bin:$PATH"
 
 EXPOSE 8001
+ENV PATH="/opt/venv/bin:$PATH"
+
+EXPOSE 8000
+
+CMD ["uvicorn", "manpi:app", "--host", "0.0.0.0", "--port", "8000"]
