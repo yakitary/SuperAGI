@@ -1,4 +1,5 @@
 # Stage 1: Compile image
+CMD ["python", "-m", "superagi.server"]
 FROM python:3.10-slim-bullseye AS compile-image
 WORKDIR /app
 
